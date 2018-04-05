@@ -153,6 +153,56 @@ For creating a new Vue project, you need to run
 vue init <template name> <project name>
 ```
 
+### Main concepts
+
+#### `v-model`
+
+The `v-model` directive is a two way binding between some data and an input.
+
+```js
+data () {
+  return {
+    message: 'some message'
+  }
+}
+
+<input type="text" v-model="message">
+<!-- will show 'some message' -->
+```
+
+#### `v-bind`
+
+The `v-bind:something` will bind `something` on a specific condition.
+
+```js
+isHidden () {
+  return true === false
+}
+```
+
+```html
+<div v-bind:hidden="isHidden">
+  hello
+</div>
+<!-- will never show -->
+```
+
+#### `v-on`
+
+The `v-on:something` will listen for an event called `something`.
+
+```html
+<div v-on:click="executeFunction">
+  click me
+</div>
+```
+
+```js
+executeFunction (event) {
+  alert('A click event was fired', event)
+}
+```
+
 ## Nuxt.js
 
 ## First little app: `/todo`
