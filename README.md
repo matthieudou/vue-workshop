@@ -67,13 +67,77 @@ console.log(materials.map(material => material.length));
 
 ### Promises
 
+Promises are for js one "good" way to wait for the "end" of the execution.
+
+```js
+const promise = new Promise((resolve, reject) => {
+  // resolve will end the function with "success"
+  // reject will end the function with an "error"
+  setTimeout(() => {
+    resolve('Here you get some data')
+  }, 1000);
+})
+
+promise
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => {
+    console.log(error)
+  })
+```
+
 ### Async/Await
+
+> An async function can contain an await expression that pauses the execution of the async function and waits for the passed Promise's resolution, and then resumes the async function's execution and returns the resolved value.
+
+It's a more "simple" way to work with promises.
 
 ### Spread operator
 
+Without spread syntax, to create a new array using an existing array as one part of it, the array literal syntax is no longer sufficient and imperative code must be used instead using a combination of push, splice, concat, etc. With spread syntax this becomes much more succinct:
+
+```js
+const parts = ['shoulders', 'knees'];
+const lyrics = ['head', ...parts, 'and', 'toes'];
+// ["head", "shoulders", "knees", "and", "toes"]
+```
+
+```js
+const person = {
+  name: 'Matthieu',
+  firstName: 'd’Oultremont',
+  age: '23',
+  workingPlace: 'Genval'
+}
+
+const representation = {
+  id: 'matthieudou',
+  ...person
+}
+```
+
+Just like spread for argument lists, ... can be used anywhere in the array literal and it can be used multiple times.
+
 ### Destructuring
 
-### Modules
+> The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
+```js
+var a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// expected output: 10
+
+console.log(b);
+// expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// expected output: [30,40,50]
+```
 
 ## Vue.js
 
