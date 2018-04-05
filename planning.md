@@ -2,17 +2,51 @@
 
 ## JavaScript
 
-### Some basic principles
+### Asynchronous language
 
-- asynchronous langage
-- `var`, `const`, `let`
-- template strings
-- arrow functions
-- promises
-- async/await
-- spread operator `...get`
-- destructuring `{hello, good: bad}`
-- import {hello} from 'hello'
+JavaScript is a nice language to work with but you need to understand the way it work.
+Js performs one task after the other but never wait for the task to end.
+
+Simple tasks works fine:
+
+```js
+  console.log('First')
+  console.log('Second')
+  // Will print:
+  // First
+  // Second
+```
+
+But when you have to wait...
+
+```js
+  setTimeout(() => {
+    console.log('First')
+  }, 1000)
+  console.log('Second')
+  // Will print:
+  // Second
+  // And after 1000 ms
+  // First
+```
+
+for a practical example, run `node JS/asynchronous.js`
+
+### `var` vs `const` vs `let`
+
+### Template strings
+
+### Arrow functions
+
+### Promises
+
+### Async/Await
+
+### Spread operator
+
+### Destructuring
+
+### Modules
 
 ## Vue.js
 
