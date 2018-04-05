@@ -1,22 +1,22 @@
 <template>
-  <section class="container">
-    <div>
+  <section class="h-screen flex items-center justify-center">
+    <div class="text-center">
       <app-logo/>
-      <h1 class="title">
+      <h1 class="font-hairline">
         vue-todo-app
       </h1>
-      <h2 class="subtitle">
+      <h2 class="font-light text-blue py-4">
         nuxt vue todo app
       </h2>
-      <div class="links">
+      <div class="pt-4">
         <a
           href="https://nuxtjs.org/"
           target="_blank"
-          class="button--green">Documentation</a>
+          class="p-2 border border-green mx-2 rounded no-underline text-black hover:bg-green hover:text-white hover:border-green-darker">Documentation</a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey">GitHub</a>
+          class="p-2 border border-blue mx-2 rounded no-underline text-black hover:bg-blue hover:text-white hover:border-blue-darker">GitHub</a>
       </div>
     </div>
   </section>
@@ -31,34 +31,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
