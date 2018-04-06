@@ -2,7 +2,7 @@ const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('Here you get some data')
     // reject(Error('Saw the error ?'))
-  }, 1000);
+  }, 2000);
 })
 
 promise
@@ -13,3 +13,4 @@ promise
     console.log(error)
   })
 
+  // console.log(promise)

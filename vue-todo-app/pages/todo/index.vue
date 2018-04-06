@@ -6,7 +6,7 @@
       <div class="flex flex-col">
         <input class="py-4 px-8 border-b" type="text" name="addItem" id="addItem" placeholder="Ajouter un élément" v-model="newItem" @keyup.enter="addItem" @keyup.esc="reset">
         <label v-for="(item, key) in items" :key="key" :for="key" class="py-4 px-8 bg-grey-lighter border-b flex items-center" :class="{'bg-green-lighter': item.checked}">
-          <input class="mr-8" :id="key" type="checkbox" :name="key" :value="item.checked" v-model="item.checked">
+          <input class="mr-8" :id="key" type="checkbox" :name="key" v-model="item.checked">
           {{item.title}}
         </label>
       </div>
