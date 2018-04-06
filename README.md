@@ -203,6 +203,30 @@ executeFunction (event) {
 }
 ```
 
+#### `v-for`
+
+
+```html
+<ul>
+  <li v-for="item in items">
+    {{item}}
+  </li>
+</ul>
+```
+
+```js
+data () {
+  return {
+    items: [
+      'hello',
+      'world',
+      'foo',
+      'bar'
+    ]
+  }
+}
+```
+
 ## Nuxt.js
 
 ## First little app: `/todo`
